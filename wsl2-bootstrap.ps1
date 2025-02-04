@@ -58,8 +58,6 @@ $command = "./ollama.service; bash"
 # run the command inside wsl2
 wsl.exe -e bash -c "cd $wslPath && $command"
 
-# alert user to wsl2 cold start + ollama services taking time to come online
-Write-Host "If WSL2 is not already running, Ollama services may take up to a minute to come online."
-Write-Host
-# information about stopping flox-ollama services; a reboot or shutdown will accomplish the same task
-Write-Host "NOTE: If you close this window, the Flox shell will die and Ollama services will terminate"
+# NOTE the FIRST: If WSL2 is not already running, Ollama services may take up to a minute to come online.
+
+# NOTE the SECOND: If you close the shell window, the Flox subshell will die and Ollama services will terminate.
